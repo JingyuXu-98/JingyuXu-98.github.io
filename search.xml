@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Hexo博客基本使用方法</title>
+      <link href="/2025/01/27/hello-world/"/>
+      <url>/2025/01/27/hello-world/</url>
+      
+        <content type="html"><![CDATA[<h6 id="相关文档"><a href="#相关文档" class="headerlink" title="相关文档"></a>相关文档</h6><p><a href="https://hexo.io/">Hexo webpage</a> <a href="https://hexo.io/docs/">Documentation</a>  <a href="https://github.com/hexojs/hexo/issues">GitHub</a> <a href="https://hexo.io/docs/writing.html">Writing</a></p><h6 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo server</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><h5 id="尝试加入图片-需要将图片放入-source-images路径下"><a href="#尝试加入图片-需要将图片放入-source-images路径下" class="headerlink" title="尝试加入图片 需要将图片放入&#x2F;source&#x2F;images路径下"></a>尝试加入图片 需要将图片放入&#x2F;source&#x2F;images路径下</h5><p><img src="/../images/test/wallhaven-7pqyqe.jpg"></p><p>pass word只需要在前面YMAL Front Matter中加入 password: ….即可</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 杂项 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

@@ -1,53 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>AnythingLLM的安装与使用</title>
-    <url>/2025/02/08/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<p>在这篇文章中，我们将介绍如何安装和使用 AnythingLLM，包括创建工作区和选择模型的步骤。</p>
-<span id="more"></span>
-
-<p><a href="https://anythingllm.com/desktop">AnythingLLM官网</a>下载并安装AnythingLLM</p>
-<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250208203352.png"></p>
-<p>程序安装完成之后，新建工作区并且选择你要使用的模型</p>
-<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250209223041.png"></p>
-<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250209223111.png"></p>
-<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250209223159.png"></p>
-<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250209223221.png"></p>
-<p>设置完成之后就可以进行对话，并且可以构建本地知识库。点击工作区的上传按钮，然后将想要放入知识库的文件拖拽上传(这里其实还是在本地，只是放入了这个工作区了)，然后进行对话的时候模型就可以根据本地知识库进行回答了。</p>
-<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250209223704.png"></p>
-<h2 id="AnythingLLM-配置网页搜索"><a href="#AnythingLLM-配置网页搜索" class="headerlink" title="AnythingLLM 配置网页搜索"></a>AnythingLLM 配置网页搜索</h2><p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250217131442.png"></p>
-<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250217131726.png"></p>
-<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250217131758.png"></p>
-<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250217131817.png"></p>
-<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250217131927.png"></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>LLM</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客基本使用方法</title>
-    <url>/2025/01/27/Hexo%E5%8D%9A%E5%AE%A2%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<p>本文将介绍 Hexo 博客的基本使用方法，包括创建新博客和常用命令。</p>
-<span id="more"></span>
-
-<h6 id="相关文档"><a href="#相关文档" class="headerlink" title="相关文档"></a>相关文档</h6><p><a href="https://hexo.io/">Hexo webpage</a> <a href="https://hexo.io/docs/">Documentation</a>  <a href="https://github.com/hexojs/hexo/issues">GitHub</a> <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h6 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new your-blog-title</span><br><span class="line">$ hexo clean</span><br><span class="line">$ hexo server</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<h5 id="尝试加入图片-需要将图片放入-source-images路径下"><a href="#尝试加入图片-需要将图片放入-source-images路径下" class="headerlink" title="尝试加入图片 需要将图片放入&#x2F;source&#x2F;images路径下"></a>尝试加入图片 需要将图片放入&#x2F;source&#x2F;images路径下</h5><p><img src="/../images/test/wallhaven-7pqyqe.jpg"></p>
-<p>pass word只需要在前面YMAL Front Matter中加入 password: ….即可</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>杂项</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Binance合约资金费率套利</title>
     <url>/2025/02/22/Binance%E5%90%88%E7%BA%A6%E8%B5%84%E9%87%91%E8%B4%B9%E7%8E%87%E5%A5%97%E5%88%A9/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请重试。" data-whm="内容认证失败，但仍可尝试查看。">
@@ -70,38 +23,26 @@
       </tags>
   </entry>
   <entry>
-    <title>Ollama安装配置本地大模型</title>
-    <url>/2025/02/01/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/</url>
-    <content><![CDATA[<p>在这篇文章中，我们将介绍如何安装和配置 Ollama 本地大模型，包括环境变量的设置。</p>
+    <title>AnythingLLM的安装与使用</title>
+    <url>/2025/02/08/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>在这篇文章中，我们将介绍如何安装和使用 AnythingLLM，包括创建工作区和选择模型的步骤。</p>
 <span id="more"></span>
 
-<p>Ollama 官网地址：<a href="https://ollama.com/">Ollama</a></p>
-<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-084209.png"></p>
-<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-084333.png"></p>
-<p>Ollama默认安装在C盘，安装完成之后需要更改Ollama模型存放位置，防止C盘爆掉，在系统环境变量中新建</p>
-<p>变量名：OLLAMA_MODELS </p>
-<p>变量值： D:\Ollama_Models</p>
-<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-090050.png"></p>
-<p>如果已经有模型存放在C盘中，迁移方法为将C盘的用户目录下的.ollama中的两个文件夹blobs和manifests移动到D盘我们新设置的存放路径即可，迁移之后可以在cmd中使用ollama list命令查看是否迁移成功。</p>
-<p><a href="https://ollama.com/search">Ollama 模型地址</a>可以进行具体模型的选择安装，以deepseek-r1为例</p>
-<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203220924.png"></p>
-<p>选择deepseek-r1 模型之后可以看到模型有蒸馏过后的1.5B、7B等，以及原版的671B模型，对应的模型下载需要运行的命令行代码也已经给出，只需要在命令行中运行对应的代码就可以下载并运行对应的大模型。</p>
-<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203221227.png"></p>
-<p>如果对应的模型还未下载，运行命令行之后就会开始下载模型，如果已经下载，运行命令行之后就会进入对话环节</p>
-<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250208125727.png"></p>
-<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250208151524.png"></p>
-<p>想要结束对话使用&#x2F;bye命令即可</p>
-<p>接下来安装Open WebUI，这是一个可扩展功能丰富且用户友好的子托管WebUI，设计为完全离线运行，并且支持各种LLM运行器，包括Ollama，并且它提供了检索增强生成等功能的支持。</p>
-<p><a href="https://github.com/open-webui/open-webui">OpenWebUI Github 地址</a></p>
-<p>首先创建一个Conda环境</p>
-<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203222044.png"></p>
-<p>然后进入这个新建的环境，使用命令行在该环境中安装Open Web UI</p>
-<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203222645.png"></p>
-<p>安装需要科学上网，因为需要上huggingface下载一些模型，如果不科学上网会报错。安装完成并运行之后在浏览器中进入<a href="https://loaclhost:8080，界面如下所示">https://loaclhost:8080，界面如下所示</a></p>
-<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203224346.png"></p>
-<p>账号邮箱密码自己随便填，只要自己不忘记就可以,因为程序是完全在本地运行的。</p>
-<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203224629.png"></p>
-<p>然后选择自己之前已经在Ollama中安装的模型，然后就可以进行测试使用了。</p>
+<p><a href="https://anythingllm.com/desktop">AnythingLLM官网</a>下载并安装AnythingLLM</p>
+<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250208203352.png"></p>
+<p>程序安装完成之后，新建工作区并且选择你要使用的模型</p>
+<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250209223041.png"></p>
+<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250209223111.png"></p>
+<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250209223159.png"></p>
+<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250209223221.png"></p>
+<p>设置完成之后就可以进行对话，并且可以构建本地知识库。点击工作区的上传按钮，然后将想要放入知识库的文件拖拽上传(这里其实还是在本地，只是放入了这个工作区了)，然后进行对话的时候模型就可以根据本地知识库进行回答了。</p>
+<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250226124819.png"></p>
+<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250209223704.png"></p>
+<h2 id="AnythingLLM-配置网页搜索"><a href="#AnythingLLM-配置网页搜索" class="headerlink" title="AnythingLLM 配置网页搜索"></a>AnythingLLM 配置网页搜索</h2><p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250217131442.png"></p>
+<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250217131726.png"></p>
+<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250217131758.png"></p>
+<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250217131817.png"></p>
+<p><img src="/../images/AnythingLLM%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250217131927.png"></p>
 ]]></content>
       <categories>
         <category>技术</category>
@@ -304,36 +245,63 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu安装Ollama并通过Cline使用Qwen-coder模型</title>
-    <url>/2025/02/16/Ubuntu%E5%AE%89%E8%A3%85Ollama%E5%B9%B6%E9%80%9A%E8%BF%87Cline%E4%BD%BF%E7%94%A8Qwen-coder%E6%A8%A1%E5%9E%8B/</url>
-    <content><![CDATA[<p>Ubuntu服务器安装Ollama,下载并使用coder模型</p>
+    <title>Hexo博客基本使用方法</title>
+    <url>/2025/01/27/Hexo%E5%8D%9A%E5%AE%A2%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>本文将介绍 Hexo 博客的基本使用方法，包括创建新博客和常用命令。</p>
 <span id="more"></span>
 
+<h6 id="相关文档"><a href="#相关文档" class="headerlink" title="相关文档"></a>相关文档</h6><p><a href="https://hexo.io/">Hexo webpage</a> <a href="https://hexo.io/docs/">Documentation</a>  <a href="https://github.com/hexojs/hexo/issues">GitHub</a> <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h6 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new your-blog-title</span><br><span class="line">$ hexo clean</span><br><span class="line">$ hexo server</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-
-<h2 id="Ubuntu-安装Ollama"><a href="#Ubuntu-安装Ollama" class="headerlink" title="Ubuntu 安装Ollama"></a>Ubuntu 安装Ollama</h2><p><img src="/../images/Ubuntu%E5%AE%89%E8%A3%85Ollama%E5%B9%B6%E9%80%9A%E8%BF%87Cline%E4%BD%BF%E7%94%A8Qwen-coder%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250216202142.png"></p>
-<p><img src="/../images/Ubuntu%E5%AE%89%E8%A3%85Ollama%E5%B9%B6%E9%80%9A%E8%BF%87Cline%E4%BD%BF%E7%94%A8Qwen-coder%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250216202210.png"></p>
-<p>一键安装之后修改ollama.service文件，改变一下端口</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano /etc/systemd/system/ollama.service</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[Service]</span><br><span class="line">Environment=<span class="string">&quot;CUDA_VISIBLE_DEVICES=0,1,2,3&quot;</span>  <span class="comment"># 这里指定让Ollama识别到的显卡ID，0,1,2,3代表四张卡</span></span><br><span class="line">Environment=<span class="string">&quot;OLLAMA_SCHED_SPREAD=1&quot;</span>          <span class="comment"># 设置为1可以让这几张卡均衡使用</span></span><br><span class="line">Environment=<span class="string">&quot;OLLAMA_KEEP_ALIVE=-1&quot;</span>           <span class="comment"># 模型一直加载，不自动卸载</span></span><br><span class="line">Environment=<span class="string">&quot;OLLAMA_HOST=0.0.0.0&quot;</span>            <span class="comment"># 监听地址</span></span><br><span class="line">Environment=<span class="string">&quot;OLLAMA_PORT=11435&quot;</span>              <span class="comment"># 监听端口</span></span><br></pre></td></tr></table></figure>
-
-<p>然后重新加载配置，重启ollama</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart ollama</span><br><span class="line">关闭服务</span><br><span class="line">systemctl stop ollama</span><br><span class="line">启动服务</span><br><span class="line">systemctl start ollama</span><br><span class="line">查看哪一个进程正在使用端口</span><br><span class="line"><span class="built_in">sudo</span> lsof -i :11434</span><br></pre></td></tr></table></figure>
-
-<p>然后就可以根据ollama官网提供的下载并运行大模型的代码来下载或运行大模型了。</p>
-<p>Qwen2.5-coder:32B模型</p>
-<p><img src="/../images/Ubuntu%E5%AE%89%E8%A3%85Ollama%E5%B9%B6%E9%80%9A%E8%BF%87Cline%E4%BD%BF%E7%94%A8Qwen-coder%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250216204454.png"></p>
-<p>deepseek-coder-v2:236B模型</p>
-<p><img src="/../images/Ubuntu%E5%AE%89%E8%A3%85Ollama%E5%B9%B6%E9%80%9A%E8%BF%87Cline%E4%BD%BF%E7%94%A8Qwen-coder%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250216211207.png"></p>
-<p>安装完成之后，我们可以结合VSCode的Cline插件实现和Cursor类似的效果</p>
-<p><img src="/../images/Ubuntu%E5%AE%89%E8%A3%85Ollama%E5%B9%B6%E9%80%9A%E8%BF%87Cline%E4%BD%BF%E7%94%A8Qwen-coder%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250217184704.png"></p>
+<h5 id="尝试加入图片-需要将图片放入-source-images路径下"><a href="#尝试加入图片-需要将图片放入-source-images路径下" class="headerlink" title="尝试加入图片 需要将图片放入&#x2F;source&#x2F;images路径下"></a>尝试加入图片 需要将图片放入&#x2F;source&#x2F;images路径下</h5><p><img src="/../images/test/wallhaven-7pqyqe.jpg"></p>
+<p>pass word只需要在前面YMAL Front Matter中加入 password: ….即可</p>
 ]]></content>
       <categories>
-        <category>LLM</category>
+        <category>技术</category>
       </categories>
       <tags>
-        <tag>Ubuntu</tag>
+        <tag>杂项</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ollama安装配置本地大模型</title>
+    <url>/2025/02/01/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/</url>
+    <content><![CDATA[<p>在这篇文章中，我们将介绍如何安装和配置 Ollama 本地大模型，包括环境变量的设置。</p>
+<span id="more"></span>
+
+<p>Ollama 官网地址：<a href="https://ollama.com/">Ollama</a></p>
+<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-084209.png"></p>
+<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-084333.png"></p>
+<p>Ollama默认安装在C盘，安装完成之后需要更改Ollama模型存放位置，防止C盘爆掉，在系统环境变量中新建</p>
+<p>变量名：OLLAMA_MODELS </p>
+<p>变量值： D:\Ollama_Models</p>
+<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-090050.png"></p>
+<p>如果已经有模型存放在C盘中，迁移方法为将C盘的用户目录下的.ollama中的两个文件夹blobs和manifests移动到D盘我们新设置的存放路径即可，迁移之后可以在cmd中使用ollama list命令查看是否迁移成功。</p>
+<p><a href="https://ollama.com/search">Ollama 模型地址</a>可以进行具体模型的选择安装，以deepseek-r1为例</p>
+<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203220924.png"></p>
+<p>选择deepseek-r1 模型之后可以看到模型有蒸馏过后的1.5B、7B等，以及原版的671B模型，对应的模型下载需要运行的命令行代码也已经给出，只需要在命令行中运行对应的代码就可以下载并运行对应的大模型。</p>
+<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203221227.png"></p>
+<p>如果对应的模型还未下载，运行命令行之后就会开始下载模型，如果已经下载，运行命令行之后就会进入对话环节</p>
+<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250208125727.png"></p>
+<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250208151524.png"></p>
+<p>想要结束对话使用&#x2F;bye命令即可</p>
+<p>接下来安装Open WebUI，这是一个可扩展功能丰富且用户友好的子托管WebUI，设计为完全离线运行，并且支持各种LLM运行器，包括Ollama，并且它提供了检索增强生成等功能的支持。</p>
+<p><a href="https://github.com/open-webui/open-webui">OpenWebUI Github 地址</a></p>
+<p>首先创建一个Conda环境</p>
+<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203222044.png"></p>
+<p>然后进入这个新建的环境，使用命令行在该环境中安装Open Web UI</p>
+<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203222645.png"></p>
+<p>安装需要科学上网，因为需要上huggingface下载一些模型，如果不科学上网会报错。安装完成并运行之后在浏览器中进入<a href="https://loaclhost:8080，界面如下所示">https://loaclhost:8080，界面如下所示</a></p>
+<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203224346.png"></p>
+<p>账号邮箱密码自己随便填，只要自己不忘记就可以,因为程序是完全在本地运行的。</p>
+<p><img src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203224629.png"></p>
+<p>然后选择自己之前已经在Ollama中安装的模型，然后就可以进行测试使用了。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>LLM</tag>
       </tags>
   </entry>
   <entry>
@@ -364,6 +332,39 @@
       </categories>
       <tags>
         <tag>OpenWebUI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu安装Ollama并通过Cline使用Qwen-coder模型</title>
+    <url>/2025/02/16/Ubuntu%E5%AE%89%E8%A3%85Ollama%E5%B9%B6%E9%80%9A%E8%BF%87Cline%E4%BD%BF%E7%94%A8Qwen-coder%E6%A8%A1%E5%9E%8B/</url>
+    <content><![CDATA[<p>Ubuntu服务器安装Ollama,下载并使用coder模型</p>
+<span id="more"></span>
+
+
+
+<h2 id="Ubuntu-安装Ollama"><a href="#Ubuntu-安装Ollama" class="headerlink" title="Ubuntu 安装Ollama"></a>Ubuntu 安装Ollama</h2><p><img src="/../images/Ubuntu%E5%AE%89%E8%A3%85Ollama%E5%B9%B6%E9%80%9A%E8%BF%87Cline%E4%BD%BF%E7%94%A8Qwen-coder%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250216202142.png"></p>
+<p><img src="/../images/Ubuntu%E5%AE%89%E8%A3%85Ollama%E5%B9%B6%E9%80%9A%E8%BF%87Cline%E4%BD%BF%E7%94%A8Qwen-coder%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250216202210.png"></p>
+<p>一键安装之后修改ollama.service文件，改变一下端口</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano /etc/systemd/system/ollama.service</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[Service]</span><br><span class="line">Environment=<span class="string">&quot;CUDA_VISIBLE_DEVICES=0,1,2,3&quot;</span>  <span class="comment"># 这里指定让Ollama识别到的显卡ID，0,1,2,3代表四张卡</span></span><br><span class="line">Environment=<span class="string">&quot;OLLAMA_SCHED_SPREAD=1&quot;</span>          <span class="comment"># 设置为1可以让这几张卡均衡使用</span></span><br><span class="line">Environment=<span class="string">&quot;OLLAMA_KEEP_ALIVE=-1&quot;</span>           <span class="comment"># 模型一直加载，不自动卸载</span></span><br><span class="line">Environment=<span class="string">&quot;OLLAMA_HOST=0.0.0.0&quot;</span>            <span class="comment"># 监听地址</span></span><br><span class="line">Environment=<span class="string">&quot;OLLAMA_PORT=11435&quot;</span>              <span class="comment"># 监听端口</span></span><br></pre></td></tr></table></figure>
+
+<p>然后重新加载配置，重启ollama</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart ollama</span><br><span class="line">关闭服务</span><br><span class="line">systemctl stop ollama</span><br><span class="line">启动服务</span><br><span class="line">systemctl start ollama</span><br><span class="line">查看哪一个进程正在使用端口</span><br><span class="line"><span class="built_in">sudo</span> lsof -i :11434</span><br></pre></td></tr></table></figure>
+
+<p>然后就可以根据ollama官网提供的下载并运行大模型的代码来下载或运行大模型了。</p>
+<p>Qwen2.5-coder:32B模型</p>
+<p><img src="/../images/Ubuntu%E5%AE%89%E8%A3%85Ollama%E5%B9%B6%E9%80%9A%E8%BF%87Cline%E4%BD%BF%E7%94%A8Qwen-coder%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250216204454.png"></p>
+<p>deepseek-coder-v2:236B模型</p>
+<p><img src="/../images/Ubuntu%E5%AE%89%E8%A3%85Ollama%E5%B9%B6%E9%80%9A%E8%BF%87Cline%E4%BD%BF%E7%94%A8Qwen-coder%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250216211207.png"></p>
+<p>安装完成之后，我们可以结合VSCode的Cline插件实现和Cursor类似的效果</p>
+<p><img src="/../images/Ubuntu%E5%AE%89%E8%A3%85Ollama%E5%B9%B6%E9%80%9A%E8%BF%87Cline%E4%BD%BF%E7%94%A8Qwen-coder%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250217184704.png"></p>
+]]></content>
+      <categories>
+        <category>LLM</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
 </search>

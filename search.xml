@@ -140,182 +140,6 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
-    <title>Ollama安装配置本地大模型</title>
-    <url>/2025/02/01/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/</url>
-    <content><![CDATA[<p>在这篇文章中，我们将介绍如何安装和配置 Ollama 本地大模型，包括环境变量的设置。</p>
-<span id="more"></span>
-
-<p>Ollama 官网地址：<a class="link"   href="https://ollama.com/" >Ollama<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-084209.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-084333.png"
-                     
-                ></p>
-<p>Ollama默认安装在C盘，安装完成之后需要更改Ollama模型存放位置，防止C盘爆掉，在系统环境变量中新建</p>
-<p>变量名：OLLAMA_MODELS </p>
-<p>变量值： D:\Ollama_Models</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-090050.png"
-                     
-                ></p>
-<p>如果已经有模型存放在C盘中，迁移方法为将C盘的用户目录下的.ollama中的两个文件夹blobs和manifests移动到D盘我们新设置的存放路径即可，迁移之后可以在cmd中使用ollama list命令查看是否迁移成功。</p>
-<p><a class="link"   href="https://ollama.com/search" >Ollama 模型地址<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>可以进行具体模型的选择安装，以deepseek-r1为例</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203220924.png"
-                     
-                ></p>
-<p>选择deepseek-r1 模型之后可以看到模型有蒸馏过后的1.5B、7B等，以及原版的671B模型，对应的模型下载需要运行的命令行代码也已经给出，只需要在命令行中运行对应的代码就可以下载并运行对应的大模型。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203221227.png"
-                     
-                ></p>
-<p>如果对应的模型还未下载，运行命令行之后就会开始下载模型，如果已经下载，运行命令行之后就会进入对话环节</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250208125727.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250208151524.png"
-                     
-                ></p>
-<p>想要结束对话使用&#x2F;bye命令即可</p>
-<p>接下来安装Open WebUI，这是一个可扩展功能丰富且用户友好的子托管WebUI，设计为完全离线运行，并且支持各种LLM运行器，包括Ollama，并且它提供了检索增强生成等功能的支持。</p>
-<p><a class="link"   href="https://github.com/open-webui/open-webui" >OpenWebUI Github 地址<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p>首先创建一个Conda环境</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203222044.png"
-                     
-                ></p>
-<p>然后进入这个新建的环境，使用命令行在该环境中安装Open Web UI</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203222645.png"
-                     
-                ></p>
-<p>安装需要科学上网，因为需要上huggingface下载一些模型，如果不科学上网会报错。安装完成并运行之后在浏览器中进入<a href="https://loaclhost:8080，界面如下所示">https://loaclhost:8080，界面如下所示</a></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203224346.png"
-                     
-                ></p>
-<p>账号邮箱密码自己随便填，只要自己不忘记就可以,因为程序是完全在本地运行的。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203224629.png"
-                     
-                ></p>
-<p>然后选择自己之前已经在Ollama中安装的模型，然后就可以进行测试使用了。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>LLM</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>OpenWebUI的更新以及接入外部API以硅基流动为例</title>
-    <url>/2025/02/10/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/</url>
-    <content><![CDATA[<p>本文将介绍如何更新 OpenWebUI 并接入外部 API，以硅基流动为例进行说明。</p>
-<span id="more"></span>
-
-<p>安装openwebui只需要在conda环境中使用pip安装</p>
-<p>更新OpenWebUI 使用如下命令即可</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install open-webui --upgrade</span><br></pre></td></tr></table></figure></div>
-
-<p>打开OpenWebUI</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210143052.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210143317.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210143401.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144241.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144255.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144310.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144339.png"
-                     
-                ></p>
-<p>注意需要填入的有三个信息，url、API key、调用的模型名称</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144843.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144902.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210145007.png"
-                     
-                ></p>
-]]></content>
-      <categories>
-        <category>LLM</category>
-      </categories>
-      <tags>
-        <tag>OpenWebUI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git笔记</title>
     <url>/2025/01/31/Git%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>在这篇文章中，我们将分享 Git 的基本概念和常用命令，帮助你更好地管理代码版本。</p>
@@ -609,6 +433,182 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
+    <title>Ollama安装配置本地大模型</title>
+    <url>/2025/02/01/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/</url>
+    <content><![CDATA[<p>在这篇文章中，我们将介绍如何安装和配置 Ollama 本地大模型，包括环境变量的设置。</p>
+<span id="more"></span>
+
+<p>Ollama 官网地址：<a class="link"   href="https://ollama.com/" >Ollama<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-084209.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-084333.png"
+                     
+                ></p>
+<p>Ollama默认安装在C盘，安装完成之后需要更改Ollama模型存放位置，防止C盘爆掉，在系统环境变量中新建</p>
+<p>变量名：OLLAMA_MODELS </p>
+<p>变量值： D:\Ollama_Models</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-090050.png"
+                     
+                ></p>
+<p>如果已经有模型存放在C盘中，迁移方法为将C盘的用户目录下的.ollama中的两个文件夹blobs和manifests移动到D盘我们新设置的存放路径即可，迁移之后可以在cmd中使用ollama list命令查看是否迁移成功。</p>
+<p><a class="link"   href="https://ollama.com/search" >Ollama 模型地址<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>可以进行具体模型的选择安装，以deepseek-r1为例</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203220924.png"
+                     
+                ></p>
+<p>选择deepseek-r1 模型之后可以看到模型有蒸馏过后的1.5B、7B等，以及原版的671B模型，对应的模型下载需要运行的命令行代码也已经给出，只需要在命令行中运行对应的代码就可以下载并运行对应的大模型。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203221227.png"
+                     
+                ></p>
+<p>如果对应的模型还未下载，运行命令行之后就会开始下载模型，如果已经下载，运行命令行之后就会进入对话环节</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250208125727.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250208151524.png"
+                     
+                ></p>
+<p>想要结束对话使用&#x2F;bye命令即可</p>
+<p>接下来安装Open WebUI，这是一个可扩展功能丰富且用户友好的子托管WebUI，设计为完全离线运行，并且支持各种LLM运行器，包括Ollama，并且它提供了检索增强生成等功能的支持。</p>
+<p><a class="link"   href="https://github.com/open-webui/open-webui" >OpenWebUI Github 地址<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>首先创建一个Conda环境</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203222044.png"
+                     
+                ></p>
+<p>然后进入这个新建的环境，使用命令行在该环境中安装Open Web UI</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203222645.png"
+                     
+                ></p>
+<p>安装需要科学上网，因为需要上huggingface下载一些模型，如果不科学上网会报错。安装完成并运行之后在浏览器中进入<a href="https://loaclhost:8080，界面如下所示">https://loaclhost:8080，界面如下所示</a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203224346.png"
+                     
+                ></p>
+<p>账号邮箱密码自己随便填，只要自己不忘记就可以,因为程序是完全在本地运行的。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203224629.png"
+                     
+                ></p>
+<p>然后选择自己之前已经在Ollama中安装的模型，然后就可以进行测试使用了。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>LLM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>OpenWebUI的更新以及接入外部API以硅基流动为例</title>
+    <url>/2025/02/10/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/</url>
+    <content><![CDATA[<p>本文将介绍如何更新 OpenWebUI 并接入外部 API，以硅基流动为例进行说明。</p>
+<span id="more"></span>
+
+<p>安装openwebui只需要在conda环境中使用pip安装</p>
+<p>更新OpenWebUI 使用如下命令即可</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install open-webui --upgrade</span><br></pre></td></tr></table></figure></div>
+
+<p>打开OpenWebUI</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210143052.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210143317.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210143401.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144241.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144255.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144310.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144339.png"
+                     
+                ></p>
+<p>注意需要填入的有三个信息，url、API key、调用的模型名称</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144843.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144902.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210145007.png"
+                     
+                ></p>
+]]></content>
+      <categories>
+        <category>LLM</category>
+      </categories>
+      <tags>
+        <tag>OpenWebUI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ubuntu安装Ollama并通过Cline使用Qwen-coder模型</title>
     <url>/2025/02/16/Ubuntu%E5%AE%89%E8%A3%85Ollama%E5%B9%B6%E9%80%9A%E8%BF%87Cline%E4%BD%BF%E7%94%A8Qwen-coder%E6%A8%A1%E5%9E%8B/</url>
     <content><![CDATA[<p>Ubuntu服务器安装Ollama,下载并使用coder模型</p>
@@ -668,7 +668,7 @@ import {initHBE} from "/js/plugins/hbe.js";
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/2025/01/20/hello-world/</url>
+    <url>/2025/01/31/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
 

@@ -140,6 +140,102 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
+    <title>Ollama安装配置本地大模型</title>
+    <url>/2025/02/01/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/</url>
+    <content><![CDATA[<p>在这篇文章中，我们将介绍如何安装和配置 Ollama 本地大模型，包括环境变量的设置。</p>
+<span id="more"></span>
+
+<p>Ollama 官网地址：<a class="link"   href="https://ollama.com/" >Ollama<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-084209.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-084333.png"
+                     
+                ></p>
+<p>Ollama默认安装在C盘，安装完成之后需要更改Ollama模型存放位置，防止C盘爆掉，在系统环境变量中新建</p>
+<p>变量名：OLLAMA_MODELS </p>
+<p>变量值： D:\Ollama_Models</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-090050.png"
+                     
+                ></p>
+<p>如果已经有模型存放在C盘中，迁移方法为将C盘的用户目录下的.ollama中的两个文件夹blobs和manifests移动到D盘我们新设置的存放路径即可，迁移之后可以在cmd中使用ollama list命令查看是否迁移成功。</p>
+<p><a class="link"   href="https://ollama.com/search" >Ollama 模型地址<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>可以进行具体模型的选择安装，以deepseek-r1为例</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203220924.png"
+                     
+                ></p>
+<p>选择deepseek-r1 模型之后可以看到模型有蒸馏过后的1.5B、7B等，以及原版的671B模型，对应的模型下载需要运行的命令行代码也已经给出，只需要在命令行中运行对应的代码就可以下载并运行对应的大模型。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203221227.png"
+                     
+                ></p>
+<p>如果对应的模型还未下载，运行命令行之后就会开始下载模型，如果已经下载，运行命令行之后就会进入对话环节</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250208125727.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250208151524.png"
+                     
+                ></p>
+<p>想要结束对话使用&#x2F;bye命令即可</p>
+<p>接下来安装Open WebUI，这是一个可扩展功能丰富且用户友好的子托管WebUI，设计为完全离线运行，并且支持各种LLM运行器，包括Ollama，并且它提供了检索增强生成等功能的支持。</p>
+<p><a class="link"   href="https://github.com/open-webui/open-webui" >OpenWebUI Github 地址<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>首先创建一个Conda环境</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203222044.png"
+                     
+                ></p>
+<p>然后进入这个新建的环境，使用命令行在该环境中安装Open Web UI</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203222645.png"
+                     
+                ></p>
+<p>安装需要科学上网，因为需要上huggingface下载一些模型，如果不科学上网会报错。安装完成并运行之后在浏览器中进入<a href="https://loaclhost:8080，界面如下所示">https://loaclhost:8080，界面如下所示</a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203224346.png"
+                     
+                ></p>
+<p>账号邮箱密码自己随便填，只要自己不忘记就可以,因为程序是完全在本地运行的。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203224629.png"
+                     
+                ></p>
+<p>然后选择自己之前已经在Ollama中安装的模型，然后就可以进行测试使用了。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>LLM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git笔记</title>
     <url>/2025/01/31/Git%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>在这篇文章中，我们将分享 Git 的基本概念和常用命令，帮助你更好地管理代码版本。</p>
@@ -433,102 +529,6 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
-    <title>Ollama安装配置本地大模型</title>
-    <url>/2025/02/01/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/</url>
-    <content><![CDATA[<p>在这篇文章中，我们将介绍如何安装和配置 Ollama 本地大模型，包括环境变量的设置。</p>
-<span id="more"></span>
-
-<p>Ollama 官网地址：<a class="link"   href="https://ollama.com/" >Ollama<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-084209.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-084333.png"
-                     
-                ></p>
-<p>Ollama默认安装在C盘，安装完成之后需要更改Ollama模型存放位置，防止C盘爆掉，在系统环境变量中新建</p>
-<p>变量名：OLLAMA_MODELS </p>
-<p>变量值： D:\Ollama_Models</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-090050.png"
-                     
-                ></p>
-<p>如果已经有模型存放在C盘中，迁移方法为将C盘的用户目录下的.ollama中的两个文件夹blobs和manifests移动到D盘我们新设置的存放路径即可，迁移之后可以在cmd中使用ollama list命令查看是否迁移成功。</p>
-<p><a class="link"   href="https://ollama.com/search" >Ollama 模型地址<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>可以进行具体模型的选择安装，以deepseek-r1为例</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203220924.png"
-                     
-                ></p>
-<p>选择deepseek-r1 模型之后可以看到模型有蒸馏过后的1.5B、7B等，以及原版的671B模型，对应的模型下载需要运行的命令行代码也已经给出，只需要在命令行中运行对应的代码就可以下载并运行对应的大模型。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203221227.png"
-                     
-                ></p>
-<p>如果对应的模型还未下载，运行命令行之后就会开始下载模型，如果已经下载，运行命令行之后就会进入对话环节</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250208125727.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250208151524.png"
-                     
-                ></p>
-<p>想要结束对话使用&#x2F;bye命令即可</p>
-<p>接下来安装Open WebUI，这是一个可扩展功能丰富且用户友好的子托管WebUI，设计为完全离线运行，并且支持各种LLM运行器，包括Ollama，并且它提供了检索增强生成等功能的支持。</p>
-<p><a class="link"   href="https://github.com/open-webui/open-webui" >OpenWebUI Github 地址<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p>首先创建一个Conda环境</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203222044.png"
-                     
-                ></p>
-<p>然后进入这个新建的环境，使用命令行在该环境中安装Open Web UI</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203222645.png"
-                     
-                ></p>
-<p>安装需要科学上网，因为需要上huggingface下载一些模型，如果不科学上网会报错。安装完成并运行之后在浏览器中进入<a href="https://loaclhost:8080，界面如下所示">https://loaclhost:8080，界面如下所示</a></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203224346.png"
-                     
-                ></p>
-<p>账号邮箱密码自己随便填，只要自己不忘记就可以,因为程序是完全在本地运行的。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203224629.png"
-                     
-                ></p>
-<p>然后选择自己之前已经在Ollama中安装的模型，然后就可以进行测试使用了。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>LLM</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>OpenWebUI的更新以及接入外部API以硅基流动为例</title>
     <url>/2025/02/10/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/</url>
     <content><![CDATA[<p>本文将介绍如何更新 OpenWebUI 并接入外部 API，以硅基流动为例进行说明。</p>
@@ -664,6 +664,93 @@ import {initHBE} from "/js/plugins/hbe.js";
       </categories>
       <tags>
         <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker多人共用gpu服务器</title>
+    <url>/2025/03/24/docker%E5%A4%9A%E4%BA%BA%E5%85%B1%E7%94%A8gpu%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><ul>
+<li>安装好docker</li>
+<li>安装好NVIDIA Container Toolkit</li>
+</ul>
+<h2 id="docker拉取合适的镜像"><a href="#docker拉取合适的镜像" class="headerlink" title="docker拉取合适的镜像"></a>docker拉取合适的镜像</h2><p><a class="link"   href="https://hub.docker.com/r/nvidia/cuda/tags?name=runtime&page=2" >docker镜像网址<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>拉取镜像成功之后运行如下代码查看已经存在的docker镜像</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">statds@4950:~$ docker images</span><br><span class="line">REPOSITORY    TAG                                IMAGE ID       CREATED        SIZE</span><br><span class="line">nvidia/cuda   12.6.3-cudnn-runtime-ubuntu24.04   3a6bd3f05c5f   4 months ago   3.26GB</span><br><span class="line">nvidia/cuda   12.6.3-runtime-ubuntu24.04         47f7f896c82c   4 months ago   2.39GB</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="创建容器"><a href="#创建容器" class="headerlink" title="创建容器"></a>创建容器</h2><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> docker run --name xjy -itd --runtime=nvidia --gpus all -p 8888:22 nvidia/cuda:12.6.3-cudnn-runtime-ubuntu24.04 /bin/bash</span><br></pre></td></tr></table></figure></div>
+
+<p>其中</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">--name 		# 创建容器的名字 </span><br><span class="line">--itd  		# 表示交互式窗口运行并且持续运行在后台</span><br><span class="line">--runtime=nvidia 		# 使用Nvidia container toolkit需要添加的字段</span><br><span class="line">--gpus all 					# 设置容器可以使用的gpu数量</span><br><span class="line">-p 5000:22 					# 宿主机的5000端口转发到容器的22端口</span><br></pre></td></tr></table></figure></div>
+
+
+
+<table>
+<thead>
+<tr>
+<th>容器名称</th>
+<th>宿主机端口</th>
+<th>容器端口</th>
+<th>密码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>shihao</td>
+<td>5000</td>
+<td>22</td>
+<td>statshihao</td>
+</tr>
+<tr>
+<td>xjy</td>
+<td>8888</td>
+<td>22</td>
+<td>woshinidie666</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="查看已有的容器"><a href="#查看已有的容器" class="headerlink" title="查看已有的容器"></a>查看已有的容器</h2><p>使用docker ps -a 命令查看所有的容器的状态</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">statds@4950:~$ docker ps -a</span><br><span class="line">CONTAINER ID   IMAGE                                          COMMAND                  CREATED          STATUS          PORTS                                     NAMES</span><br><span class="line">ab4d95b2cd05   nvidia/cuda:12.6.3-cudnn-runtime-ubuntu24.04   <span class="string">&quot;/opt/nvidia/nvidia_…&quot;</span>   9 seconds ago    Up 9 seconds    0.0.0.0:8888-&gt;22/tcp, [::]:8888-&gt;22/tcp   xjy</span><br><span class="line">358ef47ee2ce   nvidia/cuda:12.6.3-cudnn-runtime-ubuntu24.04   <span class="string">&quot;/opt/nvidia/nvidia_…&quot;</span>   47 minutes ago   Up 47 minutes   0.0.0.0:5000-&gt;22/tcp, [::]:5000-&gt;22/tcp   shihao</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h2><p>进入容器首先更新一下apt-get</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">statds@4950:~$ docker <span class="built_in">exec</span> -it xjy /bin/bash</span><br><span class="line">root@ab4d95b2cd05:/# apt-get update</span><br><span class="line">Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]</span><br><span class="line">Get:2 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]                </span><br><span class="line">Get:3 https://developer.download.nvidia.cn/compute/cuda/repos/ubuntu2404/x86_64  InRelease [1581 B]</span><br><span class="line">Get:4 https://developer.download.nvidia.cn/compute/cuda/repos/ubuntu2404/x86_64  Packages [459 kB]   </span><br><span class="line">Get:5 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1060 kB]</span><br><span class="line">Get:6 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]</span><br><span class="line">Get:7 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]</span><br><span class="line">Get:8 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]</span><br><span class="line">Get:9 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [845 kB]</span><br><span class="line">Get:10 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [916 kB]</span><br><span class="line">Get:11 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]         </span><br><span class="line">Get:12 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]            </span><br><span class="line">Get:13 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [34.0 kB]</span><br><span class="line">Get:14 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]                  </span><br><span class="line">Get:15 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [38.7 kB]</span><br><span class="line">Get:16 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1171 kB]</span><br><span class="line">Get:17 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [962 kB]</span><br><span class="line">Get:18 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1351 kB]</span><br><span class="line">Get:19 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [30.9 kB]</span><br><span class="line">Get:20 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [48.0 kB]</span><br><span class="line">Fetched 29.1 MB <span class="keyword">in</span> 6s (4721 kB/s)                                                                                                                                              </span><br><span class="line">Reading package lists... Done</span><br><span class="line">W: https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/InRelease: Key is stored <span class="keyword">in</span> legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section <span class="keyword">in</span> apt-key(8) <span class="keyword">for</span> details.</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="安装并开启ssh服务"><a href="#安装并开启ssh服务" class="headerlink" title="安装并开启ssh服务"></a>安装并开启ssh服务</h2><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">root@ab4d95b2cd05:/# apt-get install vim openssh-server net-tools</span><br></pre></td></tr></table></figure></div>
+
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">root@ab4d95b2cd05:/# service ssh restart</span><br><span class="line"> * Restarting OpenBSD Secure Shell server sshd                                  [ OK ] </span><br></pre></td></tr></table></figure></div>
+
+<h2 id="更改密码以及ssh配置文件"><a href="#更改密码以及ssh配置文件" class="headerlink" title="更改密码以及ssh配置文件"></a>更改密码以及ssh配置文件</h2><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">root@ab4d95b2cd05:/# passwd</span><br><span class="line">New password: </span><br><span class="line">Retype new password: </span><br><span class="line">passwd: password updated successfully</span><br></pre></td></tr></table></figure></div>
+
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">root@ab4d95b2cd05:/# vim /etc/ssh/sshd_config </span><br></pre></td></tr></table></figure></div>
+
+<p>将文件中的三处地方修改</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">Port 22</span><br><span class="line">PermitRootLogin yes</span><br><span class="line">PasswordAuthentication yes</span><br></pre></td></tr></table></figure></div>
+
+<p>然后再次重新启动ssh服务</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">root@ab4d95b2cd05:/# service ssh restart</span><br><span class="line"> * Restarting OpenBSD Secure Shell server sshd                                  [ OK ]</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="退出docker容器并保持在后台运行"><a href="#退出docker容器并保持在后台运行" class="headerlink" title="退出docker容器并保持在后台运行"></a>退出docker容器并保持在后台运行</h2><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">root@ab4d95b2cd05:/# <span class="built_in">exit</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<h2 id="使用另外的机器远程连接docker容器"><a href="#使用另外的机器远程连接docker容器" class="headerlink" title="使用另外的机器远程连接docker容器"></a>使用另外的机器远程连接docker容器</h2><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -p 8888 root@172.18.18.191         </span><br><span class="line">The authenticity of host <span class="string">&#x27;[172.18.18.191]:8888 ([172.18.18.191]:8888)&#x27;</span> can<span class="string">&#x27;t be established.</span></span><br><span class="line"><span class="string">ED25519 key fingerprint is SHA256:8l+S3PUZRrVPtAYzVShqnrchz6TlXwa5rraSurOmPRU.</span></span><br><span class="line"><span class="string">This key is not known by any other names</span></span><br><span class="line"><span class="string">Are you sure you want to continue connecting (yes/no/[fingerprint])? yes</span></span><br><span class="line"><span class="string">Warning: Permanently added &#x27;</span>[172.18.18.191]:8888<span class="string">&#x27; (ED25519) to the list of known hosts.</span></span><br><span class="line"><span class="string">root@172.18.18.191&#x27;</span>s password:</span><br><span class="line">Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 6.8.0-51-generic x86_64)</span><br><span class="line"></span><br><span class="line"> * Documentation:  https://help.ubuntu.com</span><br><span class="line"> * Management:     https://landscape.canonical.com</span><br><span class="line"> * Support:        https://ubuntu.com/pro</span><br><span class="line"></span><br><span class="line">This system has been minimized by removing packages and content that are</span><br><span class="line">not required on a system that <span class="built_in">users</span> <span class="keyword">do</span> not <span class="built_in">log</span> into.</span><br><span class="line"></span><br><span class="line">To restore this content, you can run the <span class="string">&#x27;unminimize&#x27;</span> <span class="built_in">command</span>.</span><br><span class="line"></span><br><span class="line">The programs included with the Ubuntu system are free software;</span><br><span class="line">the exact distribution terms <span class="keyword">for</span> each program are described <span class="keyword">in</span> the</span><br><span class="line">individual files <span class="keyword">in</span> /usr/share/doc/*/copyright.</span><br><span class="line"></span><br><span class="line">Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by</span><br><span class="line">applicable law.</span><br><span class="line"></span><br><span class="line">root@ab4d95b2cd05:~#</span><br></pre></td></tr></table></figure></div>
+
+<p>其中8888是容器对应的宿主机端口号，172.18.18.191是宿主机的公网ip.</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
       </tags>
   </entry>
   <entry>

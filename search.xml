@@ -111,6 +111,131 @@
       </tags>
   </entry>
   <entry>
+    <title>Binance合约资金费率套利</title>
+    <url>/2025/02/22/Binance%E5%90%88%E7%BA%A6%E8%B5%84%E9%87%91%E8%B4%B9%E7%8E%87%E5%A5%97%E5%88%A9/</url>
+    <content><![CDATA[
+<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="d1747cb73eff5d1ee81567e5fb49c38d94ab002a1470c915e580c075c300f74f">4469bbe8dab0642e085d537da0743b5bf63001ce66f4b2747dbdc2f1ccb0f3c976d8a816b9838f461164dd2e5fca6da69edffc7c9016775594853e2cb26da717cbe028277187c0e49caf0279727b5530</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<link href="/css/hbe.style.css" rel="stylesheet" type="text/css"><script data-swup-reload-script type="module" src="/js/plugins/hbe.js"></script>
+<script data-swup-reload-script type="module">
+import {initHBE} from "/js/plugins/hbe.js";
+  console.log("hexo-blog-encrypt: loaded.");
+    initHBE();
+</script>
+]]></content>
+      <categories>
+        <category>Crypto</category>
+      </categories>
+      <tags>
+        <tag>套利策略</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ollama安装配置本地大模型</title>
+    <url>/2025/02/01/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/</url>
+    <content><![CDATA[<p>在这篇文章中，我们将介绍如何安装和配置 Ollama 本地大模型，包括环境变量的设置。</p>
+<span id="more"></span>
+
+<p>Ollama 官网地址：<a class="link"   href="https://ollama.com/" >Ollama<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-084209.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-084333.png"
+                     
+                ></p>
+<p>Ollama默认安装在C盘，安装完成之后需要更改Ollama模型存放位置，防止C盘爆掉，在系统环境变量中新建</p>
+<p>变量名：OLLAMA_MODELS </p>
+<p>变量值： D:\Ollama_Models</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-090050.png"
+                     
+                ></p>
+<p>如果已经有模型存放在C盘中，迁移方法为将C盘的用户目录下的.ollama中的两个文件夹blobs和manifests移动到D盘我们新设置的存放路径即可，迁移之后可以在cmd中使用ollama list命令查看是否迁移成功。</p>
+<p><a class="link"   href="https://ollama.com/search" >Ollama 模型地址<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>可以进行具体模型的选择安装，以deepseek-r1为例</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203220924.png"
+                     
+                ></p>
+<p>选择deepseek-r1 模型之后可以看到模型有蒸馏过后的1.5B、7B等，以及原版的671B模型，对应的模型下载需要运行的命令行代码也已经给出，只需要在命令行中运行对应的代码就可以下载并运行对应的大模型。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203221227.png"
+                     
+                ></p>
+<p>如果对应的模型还未下载，运行命令行之后就会开始下载模型，如果已经下载，运行命令行之后就会进入对话环节</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250208125727.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250208151524.png"
+                     
+                ></p>
+<p>想要结束对话使用&#x2F;bye命令即可</p>
+<p>接下来安装Open WebUI，这是一个可扩展功能丰富且用户友好的子托管WebUI，设计为完全离线运行，并且支持各种LLM运行器，包括Ollama，并且它提供了检索增强生成等功能的支持。</p>
+<p><a class="link"   href="https://github.com/open-webui/open-webui" >OpenWebUI Github 地址<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>首先创建一个Conda环境</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203222044.png"
+                     
+                ></p>
+<p>然后进入这个新建的环境，使用命令行在该环境中安装Open Web UI</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203222645.png"
+                     
+                ></p>
+<p>安装需要科学上网，因为需要上huggingface下载一些模型，如果不科学上网会报错。安装完成并运行之后在浏览器中进入<a href="https://loaclhost:8080，界面如下所示">https://loaclhost:8080，界面如下所示</a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203224346.png"
+                     
+                ></p>
+<p>账号邮箱密码自己随便填，只要自己不忘记就可以,因为程序是完全在本地运行的。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203224629.png"
+                     
+                ></p>
+<p>然后选择自己之前已经在Ollama中安装的模型，然后就可以进行测试使用了。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>LLM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git笔记</title>
     <url>/2025/01/31/Git%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>在这篇文章中，我们将分享 Git 的基本概念和常用命令，帮助你更好地管理代码版本。</p>
@@ -404,131 +529,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Binance合约资金费率套利</title>
-    <url>/2025/02/22/Binance%E5%90%88%E7%BA%A6%E8%B5%84%E9%87%91%E8%B4%B9%E7%8E%87%E5%A5%97%E5%88%A9/</url>
-    <content><![CDATA[
-<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="d1747cb73eff5d1ee81567e5fb49c38d94ab002a1470c915e580c075c300f74f">4469bbe8dab0642e085d537da0743b5bf63001ce66f4b2747dbdc2f1ccb0f3c976d8a816b9838f461164dd2e5fca6da69edffc7c9016775594853e2cb26da717cbe028277187c0e49caf0279727b5530</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<link href="/css/hbe.style.css" rel="stylesheet" type="text/css"><script data-swup-reload-script type="module" src="/js/plugins/hbe.js"></script>
-<script data-swup-reload-script type="module">
-import {initHBE} from "/js/plugins/hbe.js";
-  console.log("hexo-blog-encrypt: loaded.");
-    initHBE();
-</script>
-]]></content>
-      <categories>
-        <category>Crypto</category>
-      </categories>
-      <tags>
-        <tag>套利策略</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ollama安装配置本地大模型</title>
-    <url>/2025/02/01/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/</url>
-    <content><![CDATA[<p>在这篇文章中，我们将介绍如何安装和配置 Ollama 本地大模型，包括环境变量的设置。</p>
-<span id="more"></span>
-
-<p>Ollama 官网地址：<a class="link"   href="https://ollama.com/" >Ollama<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-084209.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-084333.png"
-                     
-                ></p>
-<p>Ollama默认安装在C盘，安装完成之后需要更改Ollama模型存放位置，防止C盘爆掉，在系统环境变量中新建</p>
-<p>变量名：OLLAMA_MODELS </p>
-<p>变量值： D:\Ollama_Models</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/2025-02-01-090050.png"
-                     
-                ></p>
-<p>如果已经有模型存放在C盘中，迁移方法为将C盘的用户目录下的.ollama中的两个文件夹blobs和manifests移动到D盘我们新设置的存放路径即可，迁移之后可以在cmd中使用ollama list命令查看是否迁移成功。</p>
-<p><a class="link"   href="https://ollama.com/search" >Ollama 模型地址<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>可以进行具体模型的选择安装，以deepseek-r1为例</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203220924.png"
-                     
-                ></p>
-<p>选择deepseek-r1 模型之后可以看到模型有蒸馏过后的1.5B、7B等，以及原版的671B模型，对应的模型下载需要运行的命令行代码也已经给出，只需要在命令行中运行对应的代码就可以下载并运行对应的大模型。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203221227.png"
-                     
-                ></p>
-<p>如果对应的模型还未下载，运行命令行之后就会开始下载模型，如果已经下载，运行命令行之后就会进入对话环节</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250208125727.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250208151524.png"
-                     
-                ></p>
-<p>想要结束对话使用&#x2F;bye命令即可</p>
-<p>接下来安装Open WebUI，这是一个可扩展功能丰富且用户友好的子托管WebUI，设计为完全离线运行，并且支持各种LLM运行器，包括Ollama，并且它提供了检索增强生成等功能的支持。</p>
-<p><a class="link"   href="https://github.com/open-webui/open-webui" >OpenWebUI Github 地址<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p>首先创建一个Conda环境</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203222044.png"
-                     
-                ></p>
-<p>然后进入这个新建的环境，使用命令行在该环境中安装Open Web UI</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203222645.png"
-                     
-                ></p>
-<p>安装需要科学上网，因为需要上huggingface下载一些模型，如果不科学上网会报错。安装完成并运行之后在浏览器中进入<a href="https://loaclhost:8080，界面如下所示">https://loaclhost:8080，界面如下所示</a></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203224346.png"
-                     
-                ></p>
-<p>账号邮箱密码自己随便填，只要自己不忘记就可以,因为程序是完全在本地运行的。</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250203224629.png"
-                     
-                ></p>
-<p>然后选择自己之前已经在Ollama中安装的模型，然后就可以进行测试使用了。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>LLM</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>OpenWebUI的更新以及接入外部API以硅基流动为例</title>
     <url>/2025/02/10/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/</url>
     <content><![CDATA[<p>本文将介绍如何更新 OpenWebUI 并接入外部 API，以硅基流动为例进行说明。</p>
@@ -667,6 +667,32 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
+    <title>crypto交易机器人</title>
+    <url>/2025/02/24/crypto%E4%BA%A4%E6%98%93%E6%9C%BA%E5%99%A8%E4%BA%BA/</url>
+    <content><![CDATA[
+<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="476aff6daf37140222a9f55dfb5a443fd11c17738fb154f2c9e9a826b1c5f229">5bc5b173a7fed59de99c4e8957b8446597e290343d50251929d33a21798602f3</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<link href="/css/hbe.style.css" rel="stylesheet" type="text/css"><script data-swup-reload-script type="module" src="/js/plugins/hbe.js"></script>
+<script data-swup-reload-script type="module">
+import {initHBE} from "/js/plugins/hbe.js";
+  console.log("hexo-blog-encrypt: loaded.");
+    initHBE();
+</script>
+]]></content>
+      <tags>
+        <tag>crypto</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>docker多人共用gpu服务器</title>
     <url>/2025/03/20/docker%E5%A4%9A%E4%BA%BA%E5%85%B1%E7%94%A8gpu%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
     <content><![CDATA[
@@ -726,61 +752,61 @@ import {initHBE} from "/js/plugins/hbe.js";
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/Users/xjy/Myblog/source/images/%E6%9C%AC%E7%BB%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/WX20250326-132608@2x.png"
+                     data-src="/../images/%E6%9C%AC%E7%BB%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/WX20250326-132608@2x.png"
                      
                 ></p>
 <p>插件安装完成之后侧边栏会出现一个新的按钮，点击这个按钮，然后点击s sh栏后的加号</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/Users/xjy/Myblog/source/images/%E6%9C%AC%E7%BB%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/2.png"
+                     data-src="/../images/%E6%9C%AC%E7%BB%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/2.png"
                      
                 ></p>
 <p>输入自己对应账户的信息</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/Users/xjy/Myblog/source/images/%E6%9C%AC%E7%BB%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/3.png"
+                     data-src="/../images/%E6%9C%AC%E7%BB%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/3.png"
                      
                 ></p>
 <p>然后会要求你输入密码</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/Users/xjy/Myblog/source/images/%E6%9C%AC%E7%BB%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/4.png"
+                     data-src="/../images/%E6%9C%AC%E7%BB%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/4.png"
                      
                 ></p>
 <p>输入密码之后等待一段时间，等服务器端安装好ssh服务就可以连接成功服务器了，进来之后一开始空空如也</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/Users/xjy/Myblog/source/images/%E6%9C%AC%E7%BB%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/5.png"
+                     data-src="/../images/%E6%9C%AC%E7%BB%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/5.png"
                      
                 ></p>
 <p>点击打开文件夹，后续所有的文件代码数据都存放在data文件夹中即可</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/Users/xjy/Myblog/source/images/%E6%9C%AC%E7%BB%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/6.png"
+                     data-src="/../images/%E6%9C%AC%E7%BB%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/6.png"
                      
                 ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/Users/xjy/Myblog/source/images/%E6%9C%AC%E7%BB%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/7.png"
+                     data-src="/../images/%E6%9C%AC%E7%BB%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/7.png"
                      
                 ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/Users/xjy/Myblog/source/images/%E6%9C%AC%E7%BB%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/8.png"
+                     data-src="/../images/%E6%9C%AC%E7%BB%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/8.png"
                      
                 ></p>
 <p>然后就可以很好的使用服务器了</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/Users/xjy/Myblog/source/images/%E6%9C%AC%E7%BB%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/9.png"
+                     data-src="/../images/%E6%9C%AC%E7%BB%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/9.png"
                      
                 ></p>
 <p>终端里面查看conda环境也会发现已经安装好了conda直接使用即可</p>

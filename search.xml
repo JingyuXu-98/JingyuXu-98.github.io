@@ -833,4 +833,14 @@ import {initHBE} from "/js/plugins/hbe.js";
         <tag>服务器</tag>
       </tags>
   </entry>
+  <entry>
+    <title>tmux方法</title>
+    <url>/2025/05/22/tmux%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">tmux new -s simu</span><br><span class="line">tmux attach -t simu</span><br><span class="line">tmux <span class="built_in">ls</span></span><br><span class="line">tmux kill-session -t simu</span><br></pre></td></tr></table></figure></div>
+
+]]></content>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
 </search>

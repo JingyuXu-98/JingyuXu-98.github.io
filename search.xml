@@ -494,86 +494,6 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
-    <title>OpenWebUI的更新以及接入外部API以硅基流动为例</title>
-    <url>/2025/02/10/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/</url>
-    <content><![CDATA[<p>本文将介绍如何更新 OpenWebUI 并接入外部 API，以硅基流动为例进行说明。</p>
-<span id="more"></span>
-
-<p>安装openwebui只需要在conda环境中使用pip安装</p>
-<p>更新OpenWebUI 使用如下命令即可</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install open-webui --upgrade</span><br></pre></td></tr></table></figure></div>
-
-<p>打开OpenWebUI</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210143052.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210143317.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210143401.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144241.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144255.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144310.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144339.png"
-                     
-                ></p>
-<p>注意需要填入的有三个信息，url、API key、调用的模型名称</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144843.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144902.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210145007.png"
-                     
-                ></p>
-]]></content>
-      <categories>
-        <category>LLM</category>
-      </categories>
-      <tags>
-        <tag>OpenWebUI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ollama安装配置本地大模型</title>
     <url>/2025/02/01/Ollama%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E5%A4%A7%E6%A8%A1%E5%9E%8B/</url>
     <content><![CDATA[<p>在这篇文章中，我们将介绍如何安装和配置 Ollama 本地大模型，包括环境变量的设置。</p>
@@ -667,6 +587,86 @@ import {initHBE} from "/js/plugins/hbe.js";
       </categories>
       <tags>
         <tag>LLM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>OpenWebUI的更新以及接入外部API以硅基流动为例</title>
+    <url>/2025/02/10/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/</url>
+    <content><![CDATA[<p>本文将介绍如何更新 OpenWebUI 并接入外部 API，以硅基流动为例进行说明。</p>
+<span id="more"></span>
+
+<p>安装openwebui只需要在conda环境中使用pip安装</p>
+<p>更新OpenWebUI 使用如下命令即可</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install open-webui --upgrade</span><br></pre></td></tr></table></figure></div>
+
+<p>打开OpenWebUI</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210143052.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210143317.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210143401.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144241.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144255.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144310.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144339.png"
+                     
+                ></p>
+<p>注意需要填入的有三个信息，url、API key、调用的模型名称</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144843.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210144902.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/../images/OpenWebUI%E7%9A%84%E6%9B%B4%E6%96%B0%E4%BB%A5%E5%8F%8A%E6%8E%A5%E5%85%A5%E5%A4%96%E9%83%A8API%E4%BB%A5%E7%A1%85%E5%9F%BA%E6%B5%81%E5%8A%A8%E4%B8%BA%E4%BE%8B/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20250210145007.png"
+                     
+                ></p>
+]]></content>
+      <categories>
+        <category>LLM</category>
+      </categories>
+      <tags>
+        <tag>OpenWebUI</tag>
       </tags>
   </entry>
   <entry>
